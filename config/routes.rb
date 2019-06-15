@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   resource :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
   resources :payments, only: [:new, :create]
-  post 'payments/verify' => "payments#verify"
+  get "payments/verify", to: 'payments#show_verify', as: 'verify'
+  post "payments/verify"
+  post "payments/resend"
+
 end

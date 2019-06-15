@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :check_if_user_is_admin
   
   def index
     @categories = Category.all

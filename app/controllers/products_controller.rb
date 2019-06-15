@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :check_if_user_is_admin
 
   # GET /products
   def index

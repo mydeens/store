@@ -11,6 +11,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def check_if_user_is_admin
+    if !current_user.is_admin?
+      redirect_to root_url, alert: "Access denied!!!"
+    end
+  end
+
   protected
 
   def configure_permitted_parameters
