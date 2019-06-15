@@ -14,7 +14,7 @@
     In Category: <%= @product.category.name %>
 </p>
 <p style="width: 30%; text-align: 'left';">
-<%= image_tag(url_for(@product.image.variant(resize: "128x128"))) %>
+<%= image_tag(url_for(@product.image.variant(resize: "128x128"))) if @product.image.attached? %>
 </p>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

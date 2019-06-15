@@ -8,12 +8,14 @@
 user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
 
+# Category creation
 science = Category.create(name: 'Science')
 horror = Category.create(name: 'Horror')
 gothic = Category.create(name: 'Gothic')
 psychological = Category.create(name: 'Psychological')
 biographical = Category.create(name: 'Biographical')
 
+# Products creation
 dra = Product.new(name: 'Dracula', 
 description: 'Dracula PDF edition and 
 other Bram Stoker books available', price: 30)
@@ -39,5 +41,12 @@ description: 'Biographical Stories PDF edition and
  other Nathaniel Hawthorne books available', price: 20)
 bio.category = biographical
 bio.save
-
 puts 'CREATED Categories and Products'
+
+# Order Statuses creation
+OrderStatus.create! id: 1, name: "In Progress"
+OrderStatus.create! id: 2, name: "Placed"
+OrderStatus.create! id: 3, name: "Shipped"
+OrderStatus.create! id: 4, name: "Cancelled"
+
+puts 'CREATED - Order Statuses'
