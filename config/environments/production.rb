@@ -66,7 +66,7 @@ Rails.application.configure do
   config.i18n.fallbacks = true
 
   # Store files locally.
-  config.active_storage.service = :aws
+  config.active_storage.service = :amazon
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
@@ -74,7 +74,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
   :user_name => ENV['SENDGRID_USERNAME'],
   :password => ENV['SENDGRID_PASSWORD'],
-  :domain => 'mydomain.com',
+  :domain => 'estore-2019.herokuapp.com',
   :address => 'smtp.sendgrid.net',
   :port => 587,
   :authentication => :plain,
