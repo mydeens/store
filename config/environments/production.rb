@@ -66,7 +66,7 @@ Rails.application.configure do
   config.i18n.fallbacks = true
 
   # Store files locally.
-  config.active_storage.service = :amazon
+  config.active_storage.service = :local
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
