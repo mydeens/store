@@ -8,13 +8,14 @@
 <div class="well">
   <div class="row">
     <div class="col-xs-8">
-      <h4><%= Product.find(order_item.product_id).title %></h4>
+    <% product = Product.find(order_item.product_id) %>
+      <h4><%= product.name %></h4>
     </div>
     <div class="col-xs-4">
         <h4 class="text-right">Unit Price: <span style="color: green"><%= number_to_currency order_item.unit_price %></span></h4>
         <div class="row">
           <div class="col-xs-4">
-            <%= raw "<b>Item count :</b> #{order_item.quantity.to_i}" %>
+          <%= link_to product.document.filename, rails_blob_url(product.document, disposition: 'attachment') if product.document.attached? %>
           </div>
         </div>
       </div>

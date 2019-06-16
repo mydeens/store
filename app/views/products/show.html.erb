@@ -16,5 +16,8 @@
 <p style="width: 30%; text-align: 'left';">
 <%= image_tag(url_for(@product.image.variant(resize: "128x128"))) if @product.image.attached? %>
 </p>
+<p style="width: 30%; text-align: 'left';">
+<%= link_to @product.document.filename, rails_blob_path(@product.document, disposition: 'preview') if @product.document.attached? %>
+</p>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

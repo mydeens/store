@@ -16,5 +16,5 @@
     <%= render 'carts/cart_row', product: order_item.product, order_item: order_item, show_total: true %>
   <% end %>
   <h4 class="text-right">Total: <span style="color: green"><%= number_to_currency @order_items.collect {|a|a.total_price.to_f}.inject(:+)%></span></h4>
-  <h4 class="text-right"><%= link_to "Make payment", new_payment_path, :class=>"btn btn-success"%></h4>
+  <h4 class="text-right"><%= link_to "Continue purchase", root_path, :class=>"btn"%> <%= link_to "Make payment", new_payment_path, :class=>"btn btn-success"%></h4>
 <% end %>
