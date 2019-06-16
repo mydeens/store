@@ -1,1 +1,47 @@
 Simple e-commerce store to sell electronic products/files (for example PDFs)
+# README
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* ruby 2.3.1
+
+* Rails 5.2.3, rspec-rails (3.5.2)
+
+How to setup this app in you local machine :
+
+Step-1:
+
+Install ruby and rails in local from below guide .
+https://gorails.com/setup
+
+Step-2:
+
+Clone this app in local .
+
+Step-3:
+
+bundle install
+
+Step-4:
+
+rake db:create
+
+Step-5:
+
+rake db:migrate
+
+Step-6:
+
+rake db:seed
+
+Step-7:
+
+rails server . # it starts the server on http://localhost:3000
+
+Note : This app runs with active storage so make sure you have imagemagick package installed it .
+
+Run all the specs .
+
+bundle exec rspec
