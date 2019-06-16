@@ -18,27 +18,27 @@ biographical = Category.create(name: 'Biographical')
 # Products creation
 dra = Product.new(name: 'Dracula', 
 description: 'Dracula PDF edition and 
-other Bram Stoker books available', price: 30)
+other Bram Stoker books available', price: 30, stock: 200)
 dra.category = science
 dra.save
 jane = Product.new(name: 'Jane Eyre',
 description: 'Jane Eyre PDF edition and
- other Charlotte Bronte books available', price: 20.95)
+ other Charlotte Bronte books available', price: 20.95, stock: 200)
 jane.category = gothic
 jane.save
 frank = Product.new(name: 'Frankenstein',
 description: 'Frankenstein PDF edition and 
-other Mary Wollstonecraft Shelley books available ', price: 34)
+other Mary Wollstonecraft Shelley books available ', price: 34, stock: 200)
 frank.category = horror
 frank.save
 room = Product.new(name: 'A Room with a View',
 description: 'A Room with a View PDF edition and 
-other E. M. Forster books available', price: 40.95)
+other E. M. Forster books available', price: 40.95, stock: 200)
 room.category = psychological
 room.save
 bio = Product.new(name: 'Biographical Stories',
 description: 'Biographical Stories PDF edition and
- other Nathaniel Hawthorne books available', price: 20)
+ other Nathaniel Hawthorne books available', price: 20, stock: 200)
 bio.category = biographical
 bio.save
 puts 'CREATED Categories and Products'
